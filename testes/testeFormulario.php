@@ -11,9 +11,8 @@ class testeFormulario extends PHPUnit_Extensions_Selenium2TestCase
 
     public function setUp()
     {
-
       $urlDoSistema = 'http://localhost:8000/';
-	    $hostDoSelenium = 'http://localhost:4444/wd/hub';
+      $hostDoSelenium = 'http://localhost:4444/wd/hub';
 
       //Define o WebDriver
       $driver = RemoteWebDriver::create($hostDoSelenium, DesiredCapabilities::chrome());
@@ -22,7 +21,6 @@ class testeFormulario extends PHPUnit_Extensions_Selenium2TestCase
       $this->setPort(4444);             // Porta do Servidor do Selenium
       $this->setBrowser('chrome');
       $this->setBrowserUrl($urlDoSistema);
-
     }
 
     public function testaFormulario()
@@ -54,12 +52,12 @@ class testeFormulario extends PHPUnit_Extensions_Selenium2TestCase
 
         // Nome
         $element = $this->byId('resultadoNome');
-        $innerText = $element->text();
-        $this->assertEquals('Guilherme Assemany', $innerText);
+        $texto = $element->text();
+        $this->assertEquals('Guilherme Assemany', $texto);
 
         // Email
-        $innerText = $this->byId('resultadoEmail')->text();
-        $this->assertEquals('guilherme@assemany.com', $innerText);
+        $texto = $this->byId('resultadoEmail')->text();
+        $this->assertEquals('guilherme@assemany.com', $texto);
 
         // Frutas
         $this->assertEquals('laranja', $this->byId('resultadoFrutas')->text());

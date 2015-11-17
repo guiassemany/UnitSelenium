@@ -22,7 +22,6 @@ class testeTitulo extends PHPUnit_Extensions_Selenium2TestCase
       $this->setPort(4444);             // Porta do Servidor do Selenium
       $this->setBrowser('chrome');
       $this->setBrowserUrl($urlDoSistema);
-
     }
 
     public function testaTitulo()
