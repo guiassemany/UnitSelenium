@@ -1,0 +1,18 @@
+{
+  "require": {
+    "php": ">=5.3.19",
+    "phpunit/phpunit": "4.6.*",
+    "phpunit/phpunit-selenium": ">=1.2",
+    "facebook/webdriver": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Facebook\\WebDriver\\": "lib/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Facebook\\WebDriver\\": "testes/functional"
+    }
+  }
+}
